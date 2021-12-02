@@ -1,0 +1,1 @@
+<div class="alert alert-danger" style="margin-top: 10px;"><b>Invierta!</b> Para empezar a ganar suscribase a un plan.</div>
