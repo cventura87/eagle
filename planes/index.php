@@ -1,5 +1,7 @@
 
 <?php 
+  include_once'include/end_planes.php';
+
 
 //si ya adquirio un paquete ya no habra alerta de comprar
 
@@ -38,7 +40,7 @@ foreach ($packs as $key ) {
 
                    <!-- plan1 -->
 
-            <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12 "  style="float:left;">
+            <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12 bac"  style="float:left;">
               <div class="custom-box bord_div" style="border-radius: 5px; <?php 
 
  
@@ -89,7 +91,7 @@ $ref =RUTA_URL.'/registro?ref='.$userData.'&c='.$code;
 
 
 if($_SESSION['status_pack'] == 1){
-echo '<a class="btn btn-success" href="'.$ref.'">Comprar</a>';
+echo '<a id="bntBLok" class="btn btn-success" href="'.$ref.'">Comprar</a>';
 
 }else{
   
@@ -97,7 +99,7 @@ echo '<a class="btn btn-success" href="'.$ref.'">Comprar</a>';
 
  ?>
 
- <a class="btn btn-success" href="<?php echo '?module=pagos&pack='.$key['pack']; ?>">Comprar</a>
+ <a id="bntBLok" class="btn btn-success" href="<?php echo '?module=pagos&pack='.$key['pack']; ?>">Comprar</a>
 <?php }
 
 
@@ -107,7 +109,7 @@ echo '<a class="btn btn-success" href="'.$ref.'">Comprar</a>';
 
   //no ha tomado ningun paquete
 
-  echo '<a class="btn btn-success" href="?module=pagos&pack='.$key["pack"].'">Comprar</a>';
+  echo '<a id="bntBLok" class="btn btn-success" href="?module=pagos&pack='.$key["pack"].'">Comprar</a>';
 }
 
 

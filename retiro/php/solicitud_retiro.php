@@ -120,7 +120,7 @@ if($save==1){
 }// Dia actual
 else{
 
-	echo '<span class="text-warning">Upss, El dia de retiro no es correcto!</span> <span class="fa fa-info-circle text-info" title="Las solicitudes de retiros son los dias Lunes"></span>';
+	echo '<span class="text-warning">Upss, El dia de retiro no es correcto!</span> <span class="fa fa-info-circle text-info" id="popup" title="Las solicitudes de retiros son los dias Lunes"></span>';
 }
 
 /*

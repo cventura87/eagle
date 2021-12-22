@@ -82,7 +82,7 @@ if (isset($_SESSION['user_eagle'])) {
  
 </head>
 
-<body>
+<body id="msgm">
   <section id="container">
     <!-- ********************************   class="sidebar-closed"  **************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
@@ -328,7 +328,7 @@ include'../registro/php/arrayPaises.php';
 
 
   <script src="../lib/jquery/jquery.min.js"></script>
-
+<script src="../lib/jquery-ui-1.9.2.custom.min.js"></script>
   <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
    <script type="text/javascript" language="javascript" src="../lib/advanced-datatable/js/jquery.js"></script>
   <script class="include" type="text/javascript" src="../lib/jquery.dcjqaccordion.2.7.js"></script>
@@ -365,7 +365,15 @@ include'../registro/php/arrayPaises.php';
       <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap.min.js"></script>-->
   
      <script src="../retiro/js/validar_form.js"></script>
+    <?php if ($module == 'planes') {
     
+?>
+<script src="../planes/js/modo_modal.js"></script>
+   <?php 
+
+    }else{
+
+    } ?>
      
     
 
@@ -399,6 +407,8 @@ if (url == "http://eagleclub.com/data/?auth=true") {
 
 
   <script type="application/javascript">
+
+$('#popup').tooltip();
 
    /* $(document).ready(function() {
       $("#date-popover").popover({
